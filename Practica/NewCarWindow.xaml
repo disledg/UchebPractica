@@ -1,0 +1,31 @@
+﻿<Window x:Class="Practica.NewCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow"
+        Title="NewCarWindow" Height="350" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Выбрать изображение" HorizontalAlignment="Left" Margin="7,203,0,0" VerticalAlignment="Top" Height="19" Width="120" Click="Button_Click"/>
+        <TextBox Name="NumberTextBox" HorizontalAlignment="Left" Margin="7,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="AgeTextBox" HorizontalAlignment="Left" Margin="7,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ModelTextBox" HorizontalAlignment="Left" Margin="7,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="LocationTextBox" HorizontalAlignment="Left" Margin="7,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="imageControl" Stretch="Uniform" Margin="224,163,38,14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,10,0,0" TextWrapping="Wrap" Text="Введите номер регистрируемой машины" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,43,0,0" TextWrapping="Wrap" Text="Введите название модели регистрируемой машины" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,75,0,0" TextWrapping="Wrap" Text="Введите возраст регистрируемой машины" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,108,0,0" TextWrapping="Wrap" Text="Введите дату последнего обслуживания регистрируемой машины" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,150,0,0" TextWrapping="Wrap" Text="Введите нынешнее местонахождение регистрируемой машины" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="7,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="В"/><Run Language="ru-ru" Text="ыберите фото"/><Run Text=" регистрируемой машины"/></TextBlock>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.577" Height="18" Width="88" Click="Button_Click_1"/>
+        <DatePicker Name="ServiceTextBox" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Height="26" Width="95" RenderTransformOrigin="0.484,0.502"/>
+
+    </Grid>
+</Window>
