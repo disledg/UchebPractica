@@ -60,19 +60,6 @@ namespace CarManagement.ViewModels
             }
         }
 
-        public void SearchCars(string searchTerm)
-        {
-            try
-            {
-                Cars = new ObservableCollection<Car>(_sqlInstance.SearchCars(searchTerm));
-            }
-            catch (Exception ex)
-            {
-                // Логирование ошибки
-                Console.WriteLine($"Ошибка при поиске автомобилей: {ex.Message}");
-            }
-        }
-
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
