@@ -2,6 +2,7 @@
 using CarManagement.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace Practica
             if (viewModel != null)
             {
                 // Вызываем метод для обновления списка автомобилей
-                viewModel.Refresh();
+                viewModel.LoadCars();
             }
         }
 
@@ -78,13 +79,37 @@ namespace Practica
             }
         }
 
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            CarViewModel viewModel = DataContext as CarViewModel;
+            if (viewModel != null)
+            {
+                string category = (CategoryComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+                string keyword = KeywordTextBox.Text;
+
+                if (!string.IsNullOrEmpty(category) && !string.IsNullOrEmpty(keyword))
+                {
+                    viewModel.SearchCars(category, keyword);
+                    // Use the searchResult to update your UI, e.g., set it as the ItemsSource of a ListView
+                }
+                else
+                {
+                    MessageBox.Show("Выберите категорию поиска и введите ключевое слово.");
+                }
+            }
+        }
+
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             CarViewModel viewModel = DataContext as CarViewModel;
             if (viewModel != null)
             {
-                string searchTerm = SearchTextBox.Text;
-                viewModel.SearchCars(searchTerm);
+                // Восстанавливаем исходный список автомобилей
+                viewModel.LoadCars();
+
+                // Очищаем текстовое поле для ввода ключевого слова и выбираем первый элемент в списке категорий поиска
+                KeywordTextBox.Text = string.Empty;
+                CategoryComboBox.SelectedIndex = 0;
             }
         }
     }
