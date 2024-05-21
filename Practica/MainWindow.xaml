@@ -13,7 +13,7 @@
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        <ListView  x:Name="listViewCars" ItemsSource="{Binding Cars}" Margin="10,46,10,10" FontSize="16">
+        <ListView  x:Name="listViewCars" ItemsSource="{Binding Cars}" Margin="10,76,10,10" FontSize="16">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
@@ -36,17 +36,18 @@
         </ListView>
         <Button Content="Добавить" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="26" Width="85" FontSize="16" Click="Button_Click"/>
         <Button Content="Удалить" HorizontalAlignment="Left" Margin="100,15,0,0" VerticalAlignment="Top" Height="26" Width="85" FontSize="16" Click="Button_Click_2"/>
-        <Button Content="Поиск" HorizontalAlignment="Left" Margin="280,15,0,0" VerticalAlignment="Top" Height="26" Width="85" FontSize="16" Click="Button_Click3"/>
-        <TextBox x:Name="KeywordTextBox" HorizontalAlignment="Left" Height="26" Margin="370,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" FontFamily="Times New Roman" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="370,-2,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" FontSize="16"/>
-        <Button Content="Обновить" HorizontalAlignment="Left" Margin="190,15,0,0" VerticalAlignment="Top" Height="26" Width="86" FontSize="16" Click="Button_Click_1"/>
-        <ComboBox x:Name="CategoryComboBox" HorizontalAlignment="Left" Margin="548,15,0,0" VerticalAlignment="Top" Height="26" Width="150" SelectedIndex="0" FontSize="13">
+        <Button Content="Поиск" HorizontalAlignment="Left" Margin="194,15,0,0" VerticalAlignment="Top" Height="26" Width="85" FontSize="16" Click="Button_Click3"/>
+        <TextBox x:Name="KeywordTextBox" HorizontalAlignment="Left" Height="26" Margin="284,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" FontFamily="Times New Roman" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="284,-2,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="Обновить" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="26" Width="86" FontSize="16" Click="Button_Click_1"/>
+        <ComboBox x:Name="CategoryComboBox" HorizontalAlignment="Left" Margin="462,15,0,0" VerticalAlignment="Top" Height="26" Width="150" SelectedIndex="0" FontSize="13">
             <ComboBoxItem Content="Номер"/>
             <ComboBoxItem Content="Модель и марка"/>
             <ComboBoxItem Content="Возраст"/>
             <ComboBoxItem Content="Последнее обслуживание"/>
             <ComboBoxItem Content="Местоположение"/>
         </ComboBox>
-        <Button Content="Сбросить" HorizontalAlignment="Left" Margin="712,15,0,0" VerticalAlignment="Top" Height="26" Width="68" FontSize="14" Click="Button_Click_3"/>
+        <Button Content="Сбросить" HorizontalAlignment="Left" Margin="617,15,0,0" VerticalAlignment="Top" Height="26" Width="68" FontSize="14" Click="Button_Click_3"/>
+        <Button Content="Редактировать" HorizontalAlignment="Left" Margin="101,45,0,0" VerticalAlignment="Top" Height="26" Width="116" FontSize="16" Click="EditButton"/>
     </Grid>
 </Window>

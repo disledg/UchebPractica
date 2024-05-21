@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace Practica
         {
             InitializeComponent();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +78,7 @@ namespace Practica
                                 dbManager.AddCar(newCar);
 
                                 MessageBox.Show("Автомобиль успешно добавлен в базу данных.");
+                                this.Close();
 
                                 // Обновляем список автомобилей после добавления нового
                                 CarViewModel viewModel = DataContext as CarViewModel;

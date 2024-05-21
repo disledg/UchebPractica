@@ -126,5 +126,26 @@ namespace Practica
             // После закрытия нового окна делаем текущее окно снова активным
             this.IsEnabled = true;
         }
+
+        private void EditButton(object sender, RoutedEventArgs e)
+        {
+            Car selectedCar = listViewCars.SelectedItem as Car;
+            if (selectedCar != null)
+            {
+                EditWindow newWindow = new EditWindow(selectedCar);
+
+                this.IsEnabled = false;
+
+                newWindow.ShowDialog();
+
+                // После закрытия нового окна делаем текущее окно снова активным
+                this.IsEnabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Выберите автомобиль для редактирования.");
+            }
+        }
+
     }
 }

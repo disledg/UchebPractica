@@ -8,7 +8,7 @@ using CarManagement.Models;
 using System.Data;
 namespace Practica
 {
-    internal class sql
+    public class sql
     {
         string tableName = "Car";
 
@@ -131,6 +131,50 @@ namespace Practica
                 closeConnection();
             }
         }
+        public void UpdateCar(Car car)
+        {
+            string query = $"UPDATE {tableName} SET Number = @Number, Name = @Name, Age = @Age, Last_service = @Last_service, Location = @Location";
+
+            // Only include the Photo field if it's not null
+            if (car.Photo != null)
+            {
+                query += ", Photo = @Photo";
+            }
+
+            query += " WHERE Id = @Id";
+
+            try
+            {
+                openConnection();
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@Number", car.Number);
+                    command.Parameters.AddWithValue("@Name", car.Name);
+                    command.Parameters.AddWithValue("@Age", car.Age);
+                    command.Parameters.AddWithValue("@Last_service", car.Last_service);
+                    command.Parameters.AddWithValue("@Location", car.Location);
+
+                    if (car.Photo != null)
+                    {
+                        command.Parameters.AddWithValue("@Photo", car.Photo);
+                    }
+
+                    command.Parameters.AddWithValue("@Id", car.Id);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при обновлении автомобиля: {ex.Message}");
+            }
+            finally
+            {
+                closeConnection();
+            }
+        }
+
+
         public List<Car> SearchCars(string searchTerm)
         {
             List<Car> cars = new List<Car>();
