@@ -112,5 +112,19 @@ namespace Practica
                 CategoryComboBox.SelectedIndex = 0;
             }
         }
+        private void AboutMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            AboutWindow newWindow = new AboutWindow();
+            newWindow.Owner = this;
+
+            // Блокируем ввод для текущего окна
+            this.IsEnabled = false;
+
+            // Показываем новое окно модально (блокирует ввод для предыдущего окна)
+            newWindow.ShowDialog();
+
+            // После закрытия нового окна делаем текущее окно снова активным
+            this.IsEnabled = true;
+        }
     }
 }

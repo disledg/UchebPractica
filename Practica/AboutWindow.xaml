@@ -1,0 +1,30 @@
+﻿<Window x:Class="Practica.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="О CarManager" Height="480" Width="400">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Text="Название приложения: CarManager" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,27,0,0" TextWrapping="Wrap" Text="Версия: 1.0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,55,0,0" TextWrapping="Wrap" Text="Программа CarManager представляет собой инструмент для учета автомобилей в базе данных. Она предоставляет удобный интерфейс для добавления, редактирования и удаления информации об автомобилях, а также для выполнения поиска по различным критериям. CarManager поможет вам эффективно управлять вашим автопарком и поддерживать актуальную информацию о ваших автомобилях." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,135,0,0" TextWrapping="Wrap" Text="Функциональность:" VerticalAlignment="Top" FontWeight="Bold" FontSize="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,154,0,0" TextWrapping="Wrap" Text="• Добавление новых автомобилей в базу данных." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,172,0,0" TextWrapping="Wrap" Text="• Редактирование информации об автомобилях, такой как номер, модель, местоположение и дата последнего обслуживания." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,204,0,0" TextWrapping="Wrap" Text="• Удаление устаревших или ненужных записей об автомобилях." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,222,0,0" TextWrapping="Wrap" Text="• Поиск автомобилей по различным категориям, включая номер, модель, местоположение, дату последнего обслуживания и возраст автомобиля." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,267,0,0" TextWrapping="Wrap" Text="Разработчики:" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,286,0,0" TextWrapping="Wrap" Text="CarManager разработана командой изучающих программирование студентов для учебных целей. Мы стремимся предоставить полезный инструмент для управления автомобильным парком и применяем на практике полученные знания в области разработки программного обеспечения." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,357,0,0" TextWrapping="Wrap" Text="Авторские права:" VerticalAlignment="Top" FontWeight="Bold" FontSize="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,376,0,0" TextWrapping="Wrap" Text="© 2024 CarManager. Все права защищены." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,406,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+    Для обратной связи, вопросов и предложений, пожалуйста, свяжитесь с нами по адресу
+    <Hyperlink NavigateUri="mailto:support@carmanager.com">support@carmanager.com</Hyperlink>.
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,389,0,0" TextWrapping="Wrap" Text="Связаться с нами:" VerticalAlignment="Top" FontWeight="Bold" FontSize="12"/>
+    </Grid>
+</Window>

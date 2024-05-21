@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="450" Width="800">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="О программе" Click="AboutMenuItem_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
     <Grid>
         <ListView  x:Name="listViewCars" ItemsSource="{Binding Cars}" Margin="10,46,10,10" FontSize="16">
             <ListView.View>
